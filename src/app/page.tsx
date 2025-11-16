@@ -311,7 +311,7 @@ export default function Home() {
               <p
                 className={`${poppins.className} text-[16px] font-stretch-extra-expanded`}
               >
-                Hi there, I'm Joedel Lagong, a passionate web developer. I
+                Hi there, I am Joedel Lagong, a passionate web developer. I
                 specialize in frontend development, turning mockups into
                 interactive applications, and backend development, creating
                 business logic from your ideas. I also work as a full-stack
