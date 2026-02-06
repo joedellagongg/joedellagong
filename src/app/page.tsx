@@ -36,7 +36,7 @@ function Carousel() {
       <div className="embla items-center" ref={forwardRef}>
         <div className="embla__container">
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex flex-col items-center justify-center">
-            <Image src="/Node.js.png" alt="Node.js" width={40} height={100} />
+            <Image src="/nodejs.png" alt="Node.js" width={40} height={100} />
           </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex items-center justify-center">
             <Image src="/express.png" alt="Express" width={40} height={100} />
@@ -60,14 +60,14 @@ function Carousel() {
           </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex items-center justify-center">
             <Image
-              src="/postgresSQL.png"
+              src="/postgresql.png"
               alt="postgresSQL"
               width={50}
               height={100}
             />
           </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex items-center justify-center">
-            <Image src="/MySQL.png" alt="MySQL" width={50} height={100} />
+            <Image src="/mysql.png" alt="MySQL" width={50} height={100} />
           </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex items-center justify-center">
             <Image src="/python.png" alt="python" width={40} height={100} />
@@ -92,7 +92,7 @@ function Carousel() {
       <div className="embla items-center" ref={backwardRef}>
         <div className="embla__container">
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex flex-col items-center justify-center">
-            <Image src="/Node.js.png" alt="Node.js" width={40} height={100} />
+            <Image src="/nodejs.png" alt="Node.js" width={40} height={100} />
           </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex items-center justify-center">
             <Image src="/express.png" alt="Express" width={40} height={100} />
@@ -116,14 +116,14 @@ function Carousel() {
           </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex items-center justify-center">
             <Image
-              src="/postgresSQL.png"
+              src="/postgresql.png"
               alt="postgresSQL"
               width={50}
               height={100}
             />
           </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex items-center justify-center">
-            <Image src="/MySQL.png" alt="MySQL" width={50} height={100} />
+            <Image src="/mysql.png" alt="MySQL" width={50} height={100} />
           </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex items-center justify-center">
             <Image src="/python.png" alt="python" width={40} height={100} />
