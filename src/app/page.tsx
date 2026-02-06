@@ -324,7 +324,7 @@ export default function Home() {
                     onClick={() =>
                       window.open(
                         "https://www.facebook.com/joedelagong/",
-                        "_blank"
+                        "_blank",
                       )
                     }
                   >
@@ -353,7 +353,7 @@ export default function Home() {
                     onClick={() =>
                       window.open(
                         "https://www.linkedin.com/in/joedelagong/",
-                        "_blank"
+                        "_blank",
                       )
                     }
                   >
@@ -402,6 +402,60 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="portfolio-container select-none min-h-screen flex flex-col items-center justify-center ">
+          <div
+            className={`${poppins.className} antialiased my-10 text-center text-black font-medium text-[25px] md:text-[30px] lg:text-[40px]`}
+          >
+            PROJECTS
+          </div>
+          <div className="flex">
+            <div className="">
+              <div className="flex flex-col xl:flex-row items-center  ">
+                {projects.map((exp, index) => (
+                  <div
+                    key={index}
+                    className="bg-[F2F0EF] m-5 border border-black/10 hover:border-black active:border-black transition-all duration-200 ease-in-out flex flex-col  rounded-sm w-[300px] md:w-[600px] min-h-[250px] justify-between  mb-12"
+                  >
+                    <div className="m-5 flex justify-between flex-col  md:flex-row  ">
+                      <div className="mb-5 overflow-hidden">
+                        <Image
+                          src={exp.image}
+                          alt={exp.alt}
+                          width={500}
+                          height={1}
+                        />
+                      </div>
+                      <div className="ml-4">
+                        <h3
+                          className={`${poppins.className} antialiased text-black font-semibold text-[20px]`}
+                        >
+                          {exp.title}
+                        </h3>
+
+                        <p
+                          className={`${poppins.className} antialiased text-zinc-500 font-light text-[14px]`}
+                        >
+                          {exp.desc}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mx-5 mb-5 flex flex-wrap">
+                      {exp.techlang.map((item, i) => (
+                        <div
+                          key={i}
+                          className="rounded-3xl text-center flex  justify-center items-center m-1 p-2 h-6  bg-emerald-400"
+                        >
+                          <p className="text-[12px]  ">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="portfolio-container select-none min-h-screen flex flex-col justify-center ">
           <div
             className={`${poppins.className} antialiased my-10 text-center text-black/50 font-medium text-[25px] md:text-[30px] lg:text-[40px]`}
@@ -412,6 +466,7 @@ export default function Home() {
             <Carousel />
           </div>
         </div>
+
         <div className="portfolio-container select-none min-h-screen flex flex-col items-center justify-center ">
           <div
             className={`${poppins.className} antialiased my-10 text-center text-black font-medium text-[25px] md:text-[30px] lg:text-[40px]`}
@@ -475,59 +530,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="portfolio-container select-none min-h-screen flex flex-col items-center justify-center ">
-          <div
-            className={`${poppins.className} antialiased my-10 text-center text-black font-medium text-[25px] md:text-[30px] lg:text-[40px]`}
-          >
-            PROJECTS
-          </div>
-          <div className="flex">
-            <div className="">
-              <div className="flex flex-col xl:flex-row items-center  ">
-                {projects.map((exp, index) => (
-                  <div
-                    key={index}
-                    className="bg-[F2F0EF] m-5 border border-black/10 hover:border-black active:border-black transition-all duration-200 ease-in-out flex flex-col  rounded-sm w-[300px] md:w-[600px] min-h-[250px] justify-between  mb-12"
-                  >
-                    <div className="m-5 flex justify-between flex-col  md:flex-row  ">
-                      <div className="mb-5 overflow-hidden">
-                        <Image
-                          src={exp.image}
-                          alt={exp.alt}
-                          width={500}
-                          height={1}
-                        />
-                      </div>
-                      <div className="ml-4">
-                        <h3
-                          className={`${poppins.className} antialiased text-black font-semibold text-[20px]`}
-                        >
-                          {exp.title}
-                        </h3>
 
-                        <p
-                          className={`${poppins.className} antialiased text-zinc-500 font-light text-[14px]`}
-                        >
-                          {exp.desc}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mx-5 mb-5 flex flex-wrap">
-                      {exp.techlang.map((item, i) => (
-                        <div
-                          key={i}
-                          className="rounded-3xl text-center flex  justify-center items-center m-1 p-2 h-6  bg-emerald-400"
-                        >
-                          <p className="text-[12px]  ">{item}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="portfolio-container select-none min-h-[400px] flex flex-col items-center justify-center ">
           <h1
             className={`${poppins.className} antialiased text-red-500 font-bold text-[50px]`}
