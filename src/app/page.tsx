@@ -36,6 +36,14 @@ function Carousel() {
       <div className="embla items-center" ref={forwardRef}>
         <div className="embla__container">
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex flex-col items-center justify-center">
+            <Image
+              src="/railwayicon.png"
+              alt="railwayicon"
+              width={40}
+              height={100}
+            />
+          </div>
+          <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex flex-col items-center justify-center">
             <Image src="/nodejs.png" alt="Node.js" width={40} height={100} />
           </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex items-center justify-center">
@@ -91,6 +99,14 @@ function Carousel() {
       <br />
       <div className="embla items-center" ref={backwardRef}>
         <div className="embla__container">
+          <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex flex-col items-center justify-center">
+            <Image
+              src="/railwayicon.png"
+              alt="railwayicon"
+              width={40}
+              height={100}
+            />
+          </div>
           <div className="embla__slide border-[1px] rounded w-[50px] h-[100px] flex flex-col items-center justify-center">
             <Image src="/nodejs.png" alt="Node.js" width={40} height={100} />
           </div>
@@ -181,7 +197,7 @@ export default function Home() {
         "Completed hands-on tasks in Oracle Generative AI, gaining practical experience in building and deploying AI-driven solutions.",
         "Finished the required activities in Oracle Data Science, including model development, evaluation, and workflow management.",
         "Actively learning and exploring Oracle Cloud Infrastructure (OCI), focusing on its compute, storage, networking, and AI services.",
-        "PL/SQL TrainingCompleted PL/SQL training with hands-on practice in writing queries, creating stored procedures, and managing database logic.s",
+        "Completed PL/SQL training with hands-on practice in writing queries, creating stored procedures, and managing database logic.s",
       ],
       techlang: [
         "PL/SQL",
@@ -305,7 +321,7 @@ export default function Home() {
               <h5
                 className={`${poppins.className} antialiased text-black/50 font-medium text-[25px] md:text-[30px] lg:text-[40px]`}
               >
-                Frontend Developer
+                Full Stack Developer
               </h5>
               <br />
               <p
@@ -352,7 +368,7 @@ export default function Home() {
                     className="m-3 w-7"
                     onClick={() =>
                       window.open(
-                        "https://www.linkedin.com/in/joedelagong/",
+                        "https://www.linkedin.com/in/joedellagong/",
                         "_blank",
                       )
                     }
@@ -377,7 +393,7 @@ export default function Home() {
                   </a>
                   <a
                     className="m-3 w-7"
-                    href="LagongJoedel-Resume.pdf"
+                    href="JoedelLagong-Resume.pdf"
                     download
                   >
                     <Image
@@ -402,57 +418,59 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="portfolio-container select-none min-h-screen flex flex-col items-center justify-center ">
+        <div className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20">
+          {/* Title */}
           <div
-            className={`${poppins.className} antialiased my-10 text-center text-black font-medium text-[25px] md:text-[30px] lg:text-[40px]`}
+            className={`${poppins.className} antialiased my-10 text-center text-black font-medium text-xl md:text-2xl lg:text-4xl`}
           >
             PROJECTS
           </div>
-          <div className="flex">
-            <div className="">
-              <div className="flex flex-col xl:flex-row items-center  ">
-                {projects.map((exp, index) => (
-                  <div
-                    key={index}
-                    className="bg-[F2F0EF] m-5 border border-black/10 hover:border-black active:border-black transition-all duration-200 ease-in-out flex flex-col  rounded-sm w-[300px] md:w-[600px] min-h-[250px] justify-between  mb-12"
-                  >
-                    <div className="m-5 flex justify-between flex-col  md:flex-row  ">
-                      <div className="mb-5 overflow-hidden">
-                        <Image
-                          src={exp.image}
-                          alt={exp.alt}
-                          width={500}
-                          height={1}
-                        />
-                      </div>
-                      <div className="ml-4">
-                        <h3
-                          className={`${poppins.className} antialiased text-black font-semibold text-[20px]`}
-                        >
-                          {exp.title}
-                        </h3>
 
-                        <p
-                          className={`${poppins.className} antialiased text-zinc-500 font-light text-[14px]`}
-                        >
-                          {exp.desc}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mx-5 mb-5 flex flex-wrap">
-                      {exp.techlang.map((item, i) => (
-                        <div
-                          key={i}
-                          className="rounded-3xl text-center flex  justify-center items-center m-1 p-2 h-6  bg-emerald-400"
-                        >
-                          <p className="text-[12px]  ">{item}</p>
-                        </div>
-                      ))}
-                    </div>
+          {/* Projects Container */}
+          <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((exp, index) => (
+              <div
+                key={index}
+                className="w-full bg-[#faf9f8] border border-black/10 hover:border-black hover:shadow-lg transition-all duration-200 rounded-lg flex flex-col justify-between"
+              >
+                {/* Top Section */}
+                <div className="p-4 md:p-6 flex flex-col gap-4">
+                  {/* Image */}
+                  <div className="w-full overflow-hidden rounded-md">
+                    <Image
+                      src={exp.image}
+                      alt={exp.alt}
+                      width={500}
+                      height={300}
+                      className="w-full h-auto object-cover"
+                    />
                   </div>
-                ))}
+
+                  {/* Text */}
+                  <div>
+                    <h3 className="text-base md:text-lg lg:text-xl font-semibold">
+                      {exp.title}
+                    </h3>
+
+                    <p className="text-sm md:text-base text-zinc-500 mt-1">
+                      {exp.desc}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Tech Stack */}
+                <div className="px-4 md:px-6 pb-4 flex flex-wrap gap-2">
+                  {exp.techlang.map((item, i) => (
+                    <div
+                      key={i}
+                      className="px-2 py-1 text-xs md:text-sm bg-emerald-400 rounded-full"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -467,76 +485,160 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="portfolio-container select-none min-h-screen flex flex-col items-center justify-center ">
+        <div className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20">
+          {/* Title */}
           <div
-            className={`${poppins.className} antialiased my-10 text-center text-black font-medium text-[25px] md:text-[30px] lg:text-[40px]`}
+            className={`${poppins.className} antialiased my-10 text-center text-black font-medium text-xl md:text-2xl lg:text-4xl`}
           >
             WORK EXPERIENCE
           </div>
-          <div className="flex">
-            <div>
-              <div className="flex flex-col items-center ">
-                {workExperience.map((exp, index) => (
-                  <div
-                    key={index}
-                    className="bg-[F2F0EF] border border-black/10 hover:border-black active:border-black transition-all duration-200 ease-in-out flex flex-col justify-center rounded-sm w-[300px] md:w-[700px] mb-12"
-                  >
-                    <div className="m-5 flex justify-between flex-col  md:flex-row  ">
-                      <div>
-                        <h3
-                          className={`${poppins.className} antialiased text-black font-semibold text-[20px]`}
-                        >
-                          {exp.title}
-                        </h3>
 
-                        <p
-                          className={`${poppins.className} antialiased text-zinc-500 font-light text-[18px]`}
-                        >
-                          {exp.company}
-                        </p>
-                      </div>
+          {/* Cards Container */}
+          <div className="w-full max-w-4xl flex flex-col items-center gap-8">
+            {workExperience.map((exp, index) => (
+              <div
+                key={index}
+                className="w-full bg-[#faf9f8] border border-black/10 hover:border-black transition-all duration-200 rounded-lg"
+              >
+                {/* Header */}
+                <div className="p-4 md:p-6 flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+                  <div>
+                    <h3 className="text-base md:text-lg lg:text-xl font-semibold">
+                      {exp.title}
+                    </h3>
 
-                      <div className="flex items-center mt-2 sm:mt-2">
-                        <p
-                          className={`${poppins.className} antialiased text-zinc-500 font-light text-[14px]`}
-                        >
-                          {exp.date}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="m-5">
-                      <ul className="list-disc list-inside">
-                        {exp.items.map((item, i) => (
-                          <li key={i} className="text-sm mb-2">
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mx-5 mb-5 flex flex-wrap">
-                      {exp.techlang.map((item, i) => (
-                        <div
-                          key={i}
-                          className="rounded-3xl text-center flex  justify-center items-center m-1 p-2 h-6  bg-emerald-400"
-                        >
-                          <p className="text-[12px]  ">{item}</p>
-                        </div>
-                      ))}
-                    </div>
+                    <p className="text-sm md:text-base text-zinc-500">
+                      {exp.company}
+                    </p>
                   </div>
-                ))}
+
+                  <p className="text-xs md:text-sm text-zinc-500">{exp.date}</p>
+                </div>
+
+                {/* Description */}
+                <div className="px-4 md:px-6 pb-4">
+                  <ul className="list-disc list-inside text-sm md:text-base">
+                    {exp.items.map((item, i) => (
+                      <li key={i} className="mb-1">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Tech Stack */}
+                <div className="px-4 md:px-6 pb-4 flex flex-wrap gap-2">
+                  {exp.techlang.map((item, i) => (
+                    <div
+                      key={i}
+                      className="px-2 py-1 text-xs md:text-sm bg-emerald-400 rounded-full"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        <div className="portfolio-container select-none min-h-[400px] flex flex-col items-center justify-center ">
-          <h1
-            className={`${poppins.className} antialiased text-red-500 font-bold text-[50px]`}
-          >
-            WORK IN PROGRESS
-          </h1>
+        <div className="portfolio-container select-none min-h-[100px]  flex flex-row items-center justify-center ">
+          <footer className="w-full border-t mt-20 py-10 flex justify-center">
+            <div className="max-w-6xl w-full px-6 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+              {/* Left Section */}
+              <div className="text-center md:text-left max-w-md">
+                <h2 className={`${poppins.className} text-2xl font-bold`}>
+                  Joedel Lagong
+                </h2>
+                <p className="text-gray-600 mt-2 text-sm">
+                  Full-Stack Developer building modern web and mobile
+                  applications. Open for freelance work, collaborations, and
+                  full-time opportunities.
+                </p>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex gap-5 items-center">
+                <div
+                  className="w-6 cursor-pointer hover:opacity-70 transition"
+                  onClick={() =>
+                    window.open(
+                      "https://www.facebook.com/joedelagong/",
+                      "_blank",
+                    )
+                  }
+                >
+                  <Image
+                    src="/facebook.png"
+                    alt="facebook"
+                    width={100}
+                    height={1}
+                  />
+                </div>
+
+                <div
+                  className="w-6 cursor-pointer hover:opacity-70 transition"
+                  onClick={() =>
+                    window.open("https://github.com/joedellagongg", "_blank")
+                  }
+                >
+                  <Image
+                    src="/github.png"
+                    alt="github"
+                    width={100}
+                    height={1}
+                  />
+                </div>
+
+                <div
+                  className="w-6 cursor-pointer hover:opacity-70 transition"
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/joedellagong/",
+                      "_blank",
+                    )
+                  }
+                >
+                  <Image
+                    src="/linkedin.png"
+                    alt="linkedin"
+                    width={100}
+                    height={1}
+                  />
+                </div>
+
+                <a
+                  className="w-6 hover:opacity-70 transition"
+                  href="mailto:joedelsalaslagong@gmail.com"
+                >
+                  <Image
+                    src="/EmailRounded.png"
+                    alt="email"
+                    width={100}
+                    height={1}
+                  />
+                </a>
+
+                <a
+                  className="w-6 hover:opacity-70 transition"
+                  href="/JoedelLagong-Resume.pdf"
+                  download
+                >
+                  <Image
+                    src="/CarbonDocumentPdf.png"
+                    alt="resume"
+                    width={100}
+                    height={1}
+                  />
+                </a>
+              </div>
+            </div>
+            {/* Bottom */}
+          </footer>
+        </div>
+
+        <div className="mb-10 text-xs text-gray-500 text-center w-full">
+          © {new Date().getFullYear()} Joedel Lagong. All rights reserved.
         </div>
       </div>
     </div>
