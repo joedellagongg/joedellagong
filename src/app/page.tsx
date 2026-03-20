@@ -167,6 +167,16 @@ function Carousel() {
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const workExperience = [
     {
       title: "Computer and Mobile Hardware Technician",
@@ -281,26 +291,30 @@ export default function Home() {
               JL
             </div>
             <div className="hidden md:flex items-center justify-center ">
-              <h1
-                className={`${poppins.className}  p-[10px] font-semibold text-xl`}
+              <button
+                onClick={() => scrollToSection("projects")}
+                className={`${poppins.className} p-[10px] font-semibold text-xl hover:text-emerald-500 transition`}
               >
-                About Me
-              </h1>
-              <h1
-                className={`${poppins.className}  p-[10px] font-semibold text-xl`}
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection("tech-stacks")}
+                className={`${poppins.className} p-[10px] font-semibold text-xl hover:text-emerald-500 transition`}
               >
-                Skills
-              </h1>
-              <h1
-                className={`${poppins.className}  p-[10px] font-semibold text-xl`}
+                Tech Stacks
+              </button>
+              <button
+                onClick={() => scrollToSection("experiences")}
+                className={`${poppins.className} p-[10px] font-semibold text-xl hover:text-emerald-500 transition`}
               >
-                Project
-              </h1>
-              <h1
-                className={`${poppins.className}  p-[10px] font-semibold text-xl`}
+                Experiences
+              </button>
+              <button
+                onClick={() => scrollToSection("footer")}
+                className={`${poppins.className} p-[10px] font-semibold text-xl hover:text-emerald-500 transition`}
               >
-                Contact Me
-              </h1>
+                Contact
+              </button>
             </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -418,7 +432,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20">
+        <div
+          id="projects"
+          className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20"
+        >
           {/* Title */}
           <div
             className={`${poppins.className} antialiased my-10 text-center text-black font-medium text-xl md:text-2xl lg:text-4xl`}
@@ -474,7 +491,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="portfolio-container select-none min-h-screen flex flex-col justify-center ">
+        <div
+          id="tech-stacks"
+          className="portfolio-container select-none min-h-screen flex flex-col justify-center "
+        >
           <div
             className={`${poppins.className} antialiased my-10 text-center text-black/50 font-medium text-[25px] md:text-[30px] lg:text-[40px]`}
           >
@@ -485,7 +505,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20">
+        <div
+          id="experiences"
+          className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20"
+        >
           {/* Title */}
           <div
             className={`${poppins.className} antialiased my-10 text-center text-black font-medium text-xl md:text-2xl lg:text-4xl`}
@@ -542,7 +565,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="portfolio-container select-none min-h-[100px]  flex flex-row items-center justify-center ">
+        <div
+          id="footer"
+          className="portfolio-container select-none min-h-[100px]  flex flex-row items-center justify-center "
+        >
           <footer className="w-full border-t mt-20 py-10 flex justify-center">
             <div className="max-w-6xl w-full px-6 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
               {/* Left Section */}

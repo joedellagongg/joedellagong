@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .portfolio-container {
   padding-left: 80px;
   padding-right: 80px;

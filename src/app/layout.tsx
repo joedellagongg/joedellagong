@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio | Joedel Lagong",
+  title: "Joedel Lagong | Web Developer",
   description:
     "Joedel Lagong's portfolio showcasing web development, apps, and projects.",
   keywords: ["portfolio", "web developer", "frontend", "backend", "full-stack"],
