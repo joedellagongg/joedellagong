@@ -45,9 +45,10 @@ function TechSlide({
     <div className="embla__slide">
       <div
         className={`mx-3 w-[90px] h-[90px] flex flex-col items-center justify-between rounded-2xl border transition-all duration-300 group cursor-default px-3 pt-3 pb-2
-          ${dark
-            ? "bg-gray-800 border-white/8 hover:border-emerald-400/60 hover:shadow-lg hover:shadow-emerald-900/30"
-            : "bg-white border-black/8 hover:border-emerald-400/60 hover:shadow-lg hover:shadow-emerald-50"
+          ${
+            dark
+              ? "bg-gray-800 border-white/8 hover:border-emerald-400/60 hover:shadow-lg hover:shadow-emerald-900/30"
+              : "bg-white border-black/8 hover:border-emerald-400/60 hover:shadow-lg hover:shadow-emerald-50"
           }`}
       >
         <div className="flex-1 flex items-center justify-center w-full">
@@ -71,10 +72,20 @@ function TechSlide({
 
 function Carousel({ dark }: { dark: boolean }) {
   const [forwardRef] = useEmblaCarousel({ loop: true }, [
-    AutoScroll({ speed: 0.9, startDelay: 1000, direction: "forward", stopOnInteraction: false }),
+    AutoScroll({
+      speed: 0.9,
+      startDelay: 1000,
+      direction: "forward",
+      stopOnInteraction: false,
+    }),
   ]);
   const [backwardRef] = useEmblaCarousel({ loop: true }, [
-    AutoScroll({ speed: 0.9, startDelay: 1000, direction: "backward", stopOnInteraction: false }),
+    AutoScroll({
+      speed: 0.9,
+      startDelay: 1000,
+      direction: "backward",
+      stopOnInteraction: false,
+    }),
   ]);
 
   return (
@@ -122,15 +133,17 @@ export default function Home() {
   };
 
   // ─── theme helpers ───────────────────────────────────────────
-  const bg       = dark ? "bg-gray-950"   : "bg-white";
-  const bgCard   = dark ? "bg-gray-800"   : "bg-[#faf9f8]";
-  const bgSecond = dark ? "bg-gray-900"   : "bg-white";
-  const border   = dark ? "border-white/8": "border-black/8";
-  const textHead = dark ? "text-white"    : "text-gray-900";
-  const textSub  = dark ? "text-gray-400" : "text-gray-400";
+  const bg = dark ? "bg-gray-950" : "bg-white";
+  const bgCard = dark ? "bg-gray-800" : "bg-[#faf9f8]";
+  const bgSecond = dark ? "bg-gray-900" : "bg-white";
+  const border = dark ? "border-white/8" : "border-black/8";
+  const textHead = dark ? "text-white" : "text-gray-900";
+  const textSub = dark ? "text-gray-400" : "text-gray-400";
   const textBody = dark ? "text-gray-300" : "text-gray-600";
-  const divider  = dark ? "bg-gray-700"   : "bg-gray-100";
-  const navText  = dark ? "text-gray-300 hover:text-white" : "text-gray-600 hover:text-gray-900";
+  const divider = dark ? "bg-gray-700" : "bg-gray-100";
+  const navText = dark
+    ? "text-gray-300 hover:text-white"
+    : "text-gray-600 hover:text-gray-900";
   const fadeLeft = dark
     ? "linear-gradient(to right, rgb(3,7,18), transparent)"
     : "linear-gradient(to right, white, transparent)";
@@ -149,7 +162,16 @@ export default function Home() {
         "Configured WLAN and WISP modes on routers to extend, distribute, or bridge wireless networks.",
         "Set up and maintained basic home and small-office networks, including LAN wiring and wireless configuration.",
       ],
-      techlang: ["Hardware Maintenance","Removing Bloatwares","Basic Networking","LAN","Operating System","Software Diagnostics","Software Installation","Mobile Repair"],
+      techlang: [
+        "Hardware Maintenance",
+        "Removing Bloatwares",
+        "Basic Networking",
+        "LAN",
+        "Operating System",
+        "Software Diagnostics",
+        "Software Installation",
+        "Mobile Repair",
+      ],
     },
     {
       title: "Software Engineer Associate",
@@ -161,7 +183,12 @@ export default function Home() {
         "Actively learning and exploring Oracle Cloud Infrastructure (OCI), focusing on its compute, storage, networking, and AI services.",
         "Completed PL/SQL training with hands-on practice in writing queries, creating stored procedures, and managing database logic.",
       ],
-      techlang: ["PL/SQL","Oracle Professionals","Oracle Data Science","Oracle Cloud Infrastructure"],
+      techlang: [
+        "PL/SQL",
+        "Oracle Professionals",
+        "Oracle Data Science",
+        "Oracle Cloud Infrastructure",
+      ],
     },
     {
       title: "Frontend Developer Intern",
@@ -172,7 +199,7 @@ export default function Home() {
         "Integrated native device features through Expo APIs, including camera functionality and other mobile capabilities.",
         "Improved the application's user interface, enhancing visual consistency, usability, and overall user experience.",
       ],
-      techlang: ["Node.js","React Native","Next.js","Expo","HTML + CSS"],
+      techlang: ["Node.js", "React Native", "Next.js", "Expo", "HTML + CSS"],
     },
   ];
 
@@ -182,35 +209,41 @@ export default function Home() {
       alt: "adminview.png",
       title: "CMI Admin",
       desc: "The Admin System that can manage the attendance and the cashless transaction of schools and university.",
-      techlang: ["Next.js","Axios","TailwindCSS"],
+      techlang: ["Next.js", "Axios", "TailwindCSS"],
     },
     {
       image: "/mobileview3.png",
       alt: "mobileview3.png",
       title: "CMI Connect Mobile App",
       desc: "The Mobile Application that student can use to manage their online transactions. The App has a Feature of Attendance Tracking, Mobile E-Wallet for Student, and Task Announcements for School Events",
-      techlang: ["Expo","React Native","Axios","TailwindCSS"],
+      techlang: ["Expo", "React Native", "Axios", "TailwindCSS"],
     },
     {
       image: "/iTimeHRUI.png",
       alt: "iTimeHR UI",
       title: "iTime HR App",
       desc: "iTimeHR is a mobile-based Human Resource Information System (HRIS) designed to streamline employee management and attendance tracking. The application enables organizations to monitor workforce activity in real time using GPS and selfie-based verification, while also providing employees with a self-service platform for managing their work-related requests.",
-      techlang: ["Expo","Expo Location","React Native","TailwindCSS"],
+      techlang: ["Expo", "Expo Location", "React Native", "TailwindCSS"],
     },
     {
       image: "/Phoneparts.png",
       alt: "PhoneParts Web",
       title: "PhoneParts Smartphone E-commerce Website",
       desc: "PhoneParts is a web-based e-commerce platform designed for buying and selling smartphone parts and accessories. The system provides users with a seamless shopping experience, allowing them to browse products, manage their cart, and complete secure transactions. It also includes an admin panel for managing inventory, orders, and customer data.",
-      techlang: ["Vanilla PHP","MySQL","HTML + CSS"],
+      techlang: ["Vanilla PHP", "MySQL", "HTML + CSS"],
+    },
+    {
+      image: "/paymentgateway.png",
+      alt: "Payment Gateway API",
+      title: "Payment Gateway System",
+      desc: "A RESTful API for processing payments, integrated with multiple payment providers. The system handles payment requests, processes transactions securely, and provides endpoints for transaction status and history. It is designed to be scalable and easily integrable with various e-commerce platforms.",
+      techlang: ["Node.js", "Express.js", "MySQL", "Postman", "EJS", "MVC", "Axios"],
     },
   ];
 
   return (
     <div className={`flex justify-center transition-colors duration-300 ${bg}`}>
       <div className="w-full xl:w-[80%] scroll-smooth">
-
         {/* ─── MOBILE NAV OVERLAY ────────────────────────────────── */}
         {isOpen && (
           <div
@@ -221,28 +254,41 @@ export default function Home() {
             <button
               onClick={() => setIsOpen(false)}
               className={`absolute top-6 right-6 p-2 rounded-xl border transition-colors duration-200
-                ${dark
-                  ? "border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white"
-                  : "border-gray-200 text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+                ${
+                  dark
+                    ? "border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white"
+                    : "border-gray-200 text-gray-500 hover:bg-gray-100 hover:text-gray-900"
                 }`}
             >
               <X size={22} />
             </button>
 
-            {["projects","tech-stacks","experiences","footer"].map((section, i) => {
-              const labels = ["Projects","Tech Stacks","Experiences","Contact"];
-              return (
-                <button
-                  key={section}
-                  onClick={() => { scrollToSection(section); setIsOpen(false); }}
-                  className={`${poppins.className} text-2xl font-semibold tracking-tight transition-colors duration-200
+            {["projects", "tech-stacks", "experiences", "footer"].map(
+              (section, i) => {
+                const labels = [
+                  "Projects",
+                  "Tech Stacks",
+                  "Experiences",
+                  "Contact",
+                ];
+                return (
+                  <button
+                    key={section}
+                    onClick={() => {
+                      scrollToSection(section);
+                      setIsOpen(false);
+                    }}
+                    className={`${poppins.className} text-2xl font-semibold tracking-tight transition-colors duration-200
                     ${dark ? "text-white hover:text-emerald-400" : "hover:text-emerald-500"}`}
-                >
-                  <span className="text-emerald-400 text-sm font-normal mr-2">0{i + 1}.</span>
-                  {labels[i]}
-                </button>
-              );
-            })}
+                  >
+                    <span className="text-emerald-400 text-sm font-normal mr-2">
+                      0{i + 1}.
+                    </span>
+                    {labels[i]}
+                  </button>
+                );
+              },
+            )}
           </div>
         )}
 
@@ -251,13 +297,16 @@ export default function Home() {
           <div
             className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full pointer-events-none"
             style={{
-              background: "radial-gradient(circle, rgba(16,185,129,0.07) 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle, rgba(16,185,129,0.07) 0%, transparent 70%)",
               transform: "translate(20%, -20%)",
             }}
           />
 
           {/* Navbar */}
-          <nav className={`${poppins.className} flex justify-between items-center h-[80px] px-2 relative z-10`}>
+          <nav
+            className={`${poppins.className} flex justify-between items-center h-[80px] px-2 relative z-10`}
+          >
             <div className="font-bold text-2xl tracking-tighter">
               <span className="text-emerald-500">J</span>
               <span className={textHead}>L</span>
@@ -265,20 +314,29 @@ export default function Home() {
 
             {/* Desktop nav */}
             <div className="hidden md:flex items-center gap-1">
-              {["projects","tech-stacks","experiences","footer"].map((section, i) => {
-                const labels = ["Projects","Tech Stacks","Experiences","Contact"];
-                return (
-                  <button
-                    key={section}
-                    onClick={() => scrollToSection(section)}
-                    className={`group px-4 py-2 text-sm font-medium transition-colors duration-200 relative ${navText}`}
-                  >
-                    <span className="text-emerald-400 text-xs mr-1">0{i + 1}.</span>
-                    {labels[i]}
-                    <span className="absolute bottom-0 left-4 right-4 h-px bg-emerald-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
-                  </button>
-                );
-              })}
+              {["projects", "tech-stacks", "experiences", "footer"].map(
+                (section, i) => {
+                  const labels = [
+                    "Projects",
+                    "Tech Stacks",
+                    "Experiences",
+                    "Contact",
+                  ];
+                  return (
+                    <button
+                      key={section}
+                      onClick={() => scrollToSection(section)}
+                      className={`group px-4 py-2 text-sm font-medium transition-colors duration-200 relative ${navText}`}
+                    >
+                      <span className="text-emerald-400 text-xs mr-1">
+                        0{i + 1}.
+                      </span>
+                      {labels[i]}
+                      <span className="absolute bottom-0 left-4 right-4 h-px bg-emerald-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
+                    </button>
+                  );
+                },
+              )}
             </div>
 
             {/* Right side: dark mode toggle + hamburger */}
@@ -288,9 +346,10 @@ export default function Home() {
                 onClick={() => setDark(!dark)}
                 aria-label="Toggle dark mode"
                 className={`w-9 h-9 flex items-center justify-center rounded-xl border transition-all duration-200
-                  ${dark
-                    ? "border-gray-700 text-emerald-400 hover:bg-gray-800"
-                    : "border-gray-200 text-gray-500 hover:bg-gray-100"
+                  ${
+                    dark
+                      ? "border-gray-700 text-emerald-400 hover:bg-gray-800"
+                      : "border-gray-200 text-gray-500 hover:bg-gray-100"
                   }`}
               >
                 {dark ? <Sun size={17} /> : <Moon size={17} />}
@@ -301,9 +360,10 @@ export default function Home() {
                 onClick={() => setIsOpen(!isOpen)}
                 className={`md:hidden focus:outline-none relative ${isOpen ? "z-50" : "z-20"}
                   w-9 h-9 flex items-center justify-center rounded-xl border transition-all duration-200
-                  ${dark
-                    ? "border-gray-700 text-gray-300 hover:bg-gray-800"
-                    : "border-gray-200 text-gray-600 hover:bg-gray-100"
+                  ${
+                    dark
+                      ? "border-gray-700 text-gray-300 hover:bg-gray-800"
+                      : "border-gray-200 text-gray-600 hover:bg-gray-100"
                   }`}
               >
                 {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -317,26 +377,34 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 w-fit">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping absolute" />
                 <span className="w-2 h-2 rounded-full bg-emerald-400 relative" />
-                <span className={`${poppins.className} text-sm font-medium tracking-wide ${textSub}`}>
+                <span
+                  className={`${poppins.className} text-sm font-medium tracking-wide ${textSub}`}
+                >
                   Available for work
                 </span>
               </div>
 
               <div>
-                <h1 className={`${poppins.className} font-bold text-[52px] md:text-[68px] leading-[1.0] tracking-tight text-emerald-400`}>
+                <h1
+                  className={`${poppins.className} font-bold text-[52px] md:text-[68px] leading-[1.0] tracking-tight text-emerald-400`}
+                >
                   JOEDEL
                   <br />
                   <span className={textHead}>LAGONG</span>
                 </h1>
                 <div className="flex items-center gap-3 mt-3">
                   <span className="w-10 h-px bg-emerald-400" />
-                  <h5 className={`${poppins.className} font-medium text-lg md:text-xl ${textSub}`}>
+                  <h5
+                    className={`${poppins.className} font-medium text-lg md:text-xl ${textSub}`}
+                  >
                     Full Stack Developer
                   </h5>
                 </div>
               </div>
 
-              <p className={`${poppins.className} text-[15px] leading-relaxed max-w-[480px] ${textBody}`}>
+              <p
+                className={`${poppins.className} text-[15px] leading-relaxed max-w-[480px] ${textBody}`}
+              >
                 Hi there, I am Joedel Lagong, a passionate web developer. I
                 specialize in frontend development, turning mockups into
                 interactive applications, and backend development, creating
@@ -345,13 +413,31 @@ export default function Home() {
               </p>
 
               <div className="flex items-center gap-3 flex-wrap mt-2">
-                <div className={`flex items-center gap-2 rounded-2xl px-4 py-2 backdrop-blur-sm shadow-sm border
-                  ${dark ? "bg-gray-800/80 border-gray-700" : "bg-white/80 border-gray-200"}`}>
+                <div
+                  className={`flex items-center gap-2 rounded-2xl px-4 py-2 backdrop-blur-sm shadow-sm border
+                  ${dark ? "bg-gray-800/80 border-gray-700" : "bg-white/80 border-gray-200"}`}
+                >
                   {[
-                    { src: "/facebook.png", alt: "facebook", href: "https://www.facebook.com/joedelagong/" },
-                    { src: "/github.png", alt: "github", href: "https://github.com/joedellagongg" },
-                    { src: "/linkedin.png", alt: "linkedin", href: "https://www.linkedin.com/in/joedellagong/" },
-                    { src: "/EmailRounded.png", alt: "email", href: "mailto:joedelsalaslagong@gmail.com" },
+                    {
+                      src: "/facebook.png",
+                      alt: "facebook",
+                      href: "https://www.facebook.com/joedelagong/",
+                    },
+                    {
+                      src: "/github.png",
+                      alt: "github",
+                      href: "https://github.com/joedellagongg",
+                    },
+                    {
+                      src: "/linkedin.png",
+                      alt: "linkedin",
+                      href: "https://www.linkedin.com/in/joedellagong/",
+                    },
+                    {
+                      src: "/EmailRounded.png",
+                      alt: "email",
+                      href: "mailto:joedelsalaslagong@gmail.com",
+                    },
                   ].map(({ src, alt, href }) => (
                     <a
                       key={alt}
@@ -361,8 +447,13 @@ export default function Home() {
                       className={`w-7 h-7 flex items-center justify-center rounded-lg transition-colors duration-150 group
                         ${dark ? "hover:bg-gray-700" : "hover:bg-emerald-50"}`}
                     >
-                      <Image src={src} alt={alt} width={22} height={22}
-                        className={`group-hover:scale-110 transition-transform duration-150 ${dark ? "brightness-75 hover:brightness-100" : ""}`} />
+                      <Image
+                        src={src}
+                        alt={alt}
+                        width={22}
+                        height={22}
+                        className={`group-hover:scale-110 transition-transform duration-150 ${dark ? "brightness-75 hover:brightness-100" : ""}`}
+                      />
                     </a>
                   ))}
                 </div>
@@ -372,7 +463,13 @@ export default function Home() {
                   download
                   className={`${poppins.className} inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold shadow-md shadow-emerald-200/40 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5`}
                 >
-                  <Image src="/CarbonDocumentPdf.png" alt="resume" width={18} height={18} className="brightness-0 invert" />
+                  <Image
+                    src="/CarbonDocumentPdf.png"
+                    alt="resume"
+                    width={18}
+                    height={18}
+                    className="brightness-0 invert"
+                  />
                   Download CV
                 </a>
               </div>
@@ -386,13 +483,23 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full bg-emerald-400/10 scale-105 blur-xl" />
               <div className="relative w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] lg:w-[360px] lg:h-[360px]">
                 <div className="absolute -bottom-3 -right-3 w-full h-full rounded-3xl border-2 border-emerald-400/30" />
-                <Image className="rounded-3xl object-cover w-full h-full relative z-10 shadow-xl" src="/joedel.jpg" alt="Joedel Lagong" fill />
+                <Image
+                  className="rounded-3xl object-cover w-full h-full relative z-10 shadow-xl"
+                  src="/joedel.jpg"
+                  alt="Joedel Lagong"
+                  fill
+                />
               </div>
-              <div className={`${poppins.className} absolute -bottom-4 -left-4 lg:-left-8 rounded-2xl shadow-lg border px-4 py-2.5 z-20
-                ${dark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-100"}`}>
+              <div
+                className={`${poppins.className} absolute -bottom-4 -left-4 lg:-left-8 rounded-2xl shadow-lg border px-4 py-2.5 z-20
+                ${dark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-100"}`}
+              >
                 <p className={`text-xs font-medium ${textSub}`}>Experience</p>
                 <p className={`text-lg font-bold leading-tight ${textHead}`}>
-                  1+ <span className="text-sm font-medium text-emerald-500">Years</span>
+                  1+{" "}
+                  <span className="text-sm font-medium text-emerald-500">
+                    Years
+                  </span>
                 </p>
               </div>
             </div>
@@ -400,39 +507,83 @@ export default function Home() {
         </div>
 
         {/* ─── PROJECTS ──────────────────────────────────────────── */}
-        <div id="projects" className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20 py-20 relative overflow-hidden">
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none"
-            style={{ background: "radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%)", transform: "translate(-30%, 30%)" }} />
+        <div
+          id="projects"
+          className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20 py-20 relative overflow-hidden"
+        >
+          <div
+            className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%)",
+              transform: "translate(-30%, 30%)",
+            }}
+          />
 
           <div className="w-full max-w-6xl mb-14 relative z-10">
             <div className="flex items-center gap-3 mb-3">
-              <span className={`${poppins.className} text-sm font-medium text-emerald-500 tracking-widest uppercase`}>Portfolio</span>
+              <span
+                className={`${poppins.className} text-sm font-medium text-emerald-500 tracking-widest uppercase`}
+              >
+                Portfolio
+              </span>
               <span className={`flex-1 h-px ${divider}`} />
             </div>
-            <h2 className={`${poppins.className} font-bold text-[42px] md:text-[56px] leading-none tracking-tight ${textHead}`}>PROJECTS</h2>
-            <p className={`${poppins.className} text-sm md:text-base mt-3 max-w-md ${textSub}`}>A selection of things I've designed, built, and shipped.</p>
+            <h2
+              className={`${poppins.className} font-bold text-[42px] md:text-[56px] leading-none tracking-tight ${textHead}`}
+            >
+              PROJECTS
+            </h2>
+            <p
+              className={`${poppins.className} text-sm md:text-base mt-3 max-w-md ${textSub}`}
+            >
+              A selection of things I've designed, built, and shipped.
+            </p>
           </div>
 
           <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
             {projects.map((exp, index) => (
-              <div key={index} className={`group w-full border hover:border-emerald-400/60 hover:shadow-xl hover:shadow-emerald-900/10 transition-all duration-300 rounded-2xl flex flex-col justify-between overflow-hidden ${bgCard} ${border}`}>
+              <div
+                key={index}
+                className={`group w-full border hover:border-emerald-400/60 hover:shadow-xl hover:shadow-emerald-900/10 transition-all duration-300 rounded-2xl flex flex-col justify-between overflow-hidden ${bgCard} ${border}`}
+              >
                 <div className="relative w-full overflow-hidden bg-gray-100">
-                  <Image src={exp.image} alt={exp.alt} width={600} height={360}
-                    className="w-full h-[200px] md:h-[220px] object-cover group-hover:scale-[1.03] transition-transform duration-500" />
-                  <div className={`${poppins.className} absolute top-3 left-3 w-8 h-8 rounded-full backdrop-blur-sm flex items-center justify-center text-xs font-bold shadow-sm
-                    ${dark ? "bg-gray-900/90 text-gray-300" : "bg-white/90 text-gray-500"}`}>
+                  <Image
+                    src={exp.image}
+                    alt={exp.alt}
+                    width={600}
+                    height={360}
+                    className="w-full h-[200px] md:h-[220px] object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                  <div
+                    className={`${poppins.className} absolute top-3 left-3 w-8 h-8 rounded-full backdrop-blur-sm flex items-center justify-center text-xs font-bold shadow-sm
+                    ${dark ? "bg-gray-900/90 text-gray-300" : "bg-white/90 text-gray-500"}`}
+                  >
                     {String(index + 1).padStart(2, "0")}
                   </div>
                 </div>
                 <div className="p-5 md:p-6 flex flex-col gap-4 flex-1">
                   <div className="flex flex-col gap-1.5">
-                    <h3 className={`${poppins.className} text-base md:text-lg font-semibold group-hover:text-emerald-500 transition-colors duration-200 ${textHead}`}>{exp.title}</h3>
-                    <p className={`${poppins.className} text-sm leading-relaxed ${textSub}`}>{exp.desc}</p>
+                    <h3
+                      className={`${poppins.className} text-base md:text-lg font-semibold group-hover:text-emerald-500 transition-colors duration-200 ${textHead}`}
+                    >
+                      {exp.title}
+                    </h3>
+                    <p
+                      className={`${poppins.className} text-sm leading-relaxed ${textSub}`}
+                    >
+                      {exp.desc}
+                    </p>
                   </div>
                   <div className={`h-px ${divider}`} />
                   <div className="flex flex-wrap gap-2">
                     {exp.techlang.map((item, i) => (
-                      <span key={i} className={`${poppins.className} px-3 py-1 text-xs font-medium rounded-full border border-emerald-200 text-emerald-700 bg-emerald-50 transition-colors duration-150 hover:bg-emerald-100`}>{item}</span>
+                      <span
+                        key={i}
+                        className={`${poppins.className} px-3 py-1 text-xs font-medium rounded-full border border-emerald-200 text-emerald-700 bg-emerald-50 transition-colors duration-150 hover:bg-emerald-100`}
+                      >
+                        {item}
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -442,31 +593,73 @@ export default function Home() {
         </div>
 
         {/* ─── TECH STACKS ───────────────────────────────────────── */}
-        <div id="tech-stacks" className="portfolio-container select-none min-h-screen flex flex-col justify-center px-4 md:px-10 lg:px-20 py-20 relative overflow-hidden">
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
-            style={{ background: "radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%)", transform: "translate(30%, 30%)" }} />
+        <div
+          id="tech-stacks"
+          className="portfolio-container select-none min-h-screen flex flex-col justify-center px-4 md:px-10 lg:px-20 py-20 relative overflow-hidden"
+        >
+          <div
+            className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%)",
+              transform: "translate(30%, 30%)",
+            }}
+          />
 
           <div className="w-full max-w-6xl mx-auto mb-14 relative z-10">
             <div className="flex items-center gap-3 mb-3">
-              <span className={`${poppins.className} text-sm font-medium text-emerald-500 tracking-widest uppercase`}>Skills</span>
+              <span
+                className={`${poppins.className} text-sm font-medium text-emerald-500 tracking-widest uppercase`}
+              >
+                Skills
+              </span>
               <span className={`flex-1 h-px ${divider}`} />
             </div>
-            <h2 className={`${poppins.className} font-bold text-[42px] md:text-[56px] leading-none tracking-tight ${textHead}`}>TECH STACKS</h2>
-            <p className={`${poppins.className} text-sm md:text-base mt-3 max-w-md ${textSub}`}>Tools and technologies I use to bring ideas to life.</p>
+            <h2
+              className={`${poppins.className} font-bold text-[42px] md:text-[56px] leading-none tracking-tight ${textHead}`}
+            >
+              TECH STACKS
+            </h2>
+            <p
+              className={`${poppins.className} text-sm md:text-base mt-3 max-w-md ${textSub}`}
+            >
+              Tools and technologies I use to bring ideas to life.
+            </p>
           </div>
 
           <div className="relative z-10">
-            <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: fadeLeft }} />
-            <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none" style={{ background: fadeRight }} />
+            <div
+              className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+              style={{ background: fadeLeft }}
+            />
+            <div
+              className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+              style={{ background: fadeRight }}
+            />
             <Carousel dark={dark} />
           </div>
 
           <div className="w-full max-w-6xl mx-auto mt-16 relative z-10">
             <div className="grid grid-cols-3 gap-4">
-              {[{ value: "13+", label: "Technologies" },{ value: "1+", label: "Years Building" },{ value: "∞", label: "Still Learning" }].map(({ value, label }) => (
-                <div key={label} className={`flex flex-col items-center justify-center py-6 rounded-2xl border hover:border-emerald-400/40 transition-all duration-300 group ${bgCard} ${border}`}>
-                  <span className={`${poppins.className} text-2xl md:text-3xl font-bold group-hover:text-emerald-500 transition-colors duration-200 ${textHead}`}>{value}</span>
-                  <span className={`${poppins.className} text-xs md:text-sm font-medium mt-1 ${textSub}`}>{label}</span>
+              {[
+                { value: "13+", label: "Technologies" },
+                { value: "1+", label: "Years Building" },
+                { value: "∞", label: "Still Learning" },
+              ].map(({ value, label }) => (
+                <div
+                  key={label}
+                  className={`flex flex-col items-center justify-center py-6 rounded-2xl border hover:border-emerald-400/40 transition-all duration-300 group ${bgCard} ${border}`}
+                >
+                  <span
+                    className={`${poppins.className} text-2xl md:text-3xl font-bold group-hover:text-emerald-500 transition-colors duration-200 ${textHead}`}
+                  >
+                    {value}
+                  </span>
+                  <span
+                    className={`${poppins.className} text-xs md:text-sm font-medium mt-1 ${textSub}`}
+                  >
+                    {label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -474,38 +667,82 @@ export default function Home() {
         </div>
 
         {/* ─── WORK EXPERIENCE ───────────────────────────────────── */}
-        <div id="experiences" className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20 py-20 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
-            style={{ background: "radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%)", transform: "translate(30%, -20%)" }} />
+        <div
+          id="experiences"
+          className="portfolio-container select-none min-h-screen flex flex-col items-center px-4 md:px-10 lg:px-20 py-20 relative overflow-hidden"
+        >
+          <div
+            className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%)",
+              transform: "translate(30%, -20%)",
+            }}
+          />
 
           <div className="w-full max-w-4xl mb-14 relative z-10">
             <div className="flex items-center gap-3 mb-3">
-              <span className={`${poppins.className} text-sm font-medium text-emerald-500 tracking-widest uppercase`}>Career</span>
+              <span
+                className={`${poppins.className} text-sm font-medium text-emerald-500 tracking-widest uppercase`}
+              >
+                Career
+              </span>
               <span className={`flex-1 h-px ${divider}`} />
             </div>
-            <h2 className={`${poppins.className} font-bold text-[42px] md:text-[56px] leading-none tracking-tight ${textHead}`}>WORK EXPERIENCE</h2>
-            <p className={`${poppins.className} text-sm md:text-base mt-3 max-w-md ${textSub}`}>Places I've worked, problems I've solved, and things I've shipped.</p>
+            <h2
+              className={`${poppins.className} font-bold text-[42px] md:text-[56px] leading-none tracking-tight ${textHead}`}
+            >
+              WORK EXPERIENCE
+            </h2>
+            <p
+              className={`${poppins.className} text-sm md:text-base mt-3 max-w-md ${textSub}`}
+            >
+              Places I've worked, problems I've solved, and things I've shipped.
+            </p>
           </div>
 
           <div className="w-full max-w-4xl flex flex-col relative z-10">
-            <div className={`absolute left-[11px] top-4 bottom-4 w-px hidden md:block ${divider}`} />
+            <div
+              className={`absolute left-[11px] top-4 bottom-4 w-px hidden md:block ${divider}`}
+            />
             {workExperience.map((exp, index) => (
               <div key={index} className="relative flex gap-6 mb-8 group">
                 <div className="hidden md:flex flex-col items-center pt-6 flex-shrink-0">
-                  <div className={`w-[23px] h-[23px] rounded-full border-2 border-emerald-400 group-hover:bg-emerald-400 transition-colors duration-300 z-10 ${dark ? "bg-gray-950" : "bg-white"}`} />
+                  <div
+                    className={`w-[23px] h-[23px] rounded-full border-2 border-emerald-400 group-hover:bg-emerald-400 transition-colors duration-300 z-10 ${dark ? "bg-gray-950" : "bg-white"}`}
+                  />
                 </div>
-                <div className={`flex-1 border hover:border-emerald-400/60 hover:shadow-xl hover:shadow-emerald-900/10 transition-all duration-300 rounded-2xl overflow-hidden ${bgCard} ${border}`}>
-                  <div className={`p-5 md:p-6 flex flex-col md:flex-row md:justify-between md:items-start gap-3 border-b ${divider}`}>
+                <div
+                  className={`flex-1 border hover:border-emerald-400/60 hover:shadow-xl hover:shadow-emerald-900/10 transition-all duration-300 rounded-2xl overflow-hidden ${bgCard} ${border}`}
+                >
+                  <div
+                    className={`p-5 md:p-6 flex flex-col md:flex-row md:justify-between md:items-start gap-3 border-b ${divider}`}
+                  >
                     <div className="flex flex-col gap-1">
-                      <h3 className={`${poppins.className} text-base md:text-lg font-semibold group-hover:text-emerald-500 transition-colors duration-200 ${textHead}`}>{exp.title}</h3>
-                      <p className={`${poppins.className} text-sm font-medium ${textSub}`}>{exp.company}</p>
+                      <h3
+                        className={`${poppins.className} text-base md:text-lg font-semibold group-hover:text-emerald-500 transition-colors duration-200 ${textHead}`}
+                      >
+                        {exp.title}
+                      </h3>
+                      <p
+                        className={`${poppins.className} text-sm font-medium ${textSub}`}
+                      >
+                        {exp.company}
+                      </p>
                     </div>
-                    <span className={`${poppins.className} inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 whitespace-nowrap self-start`}>{exp.date}</span>
+                    <span
+                      className={`${poppins.className} inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 whitespace-nowrap self-start`}
+                    >
+                      {exp.date}
+                    </span>
                   </div>
                   <div className="px-5 md:px-6 py-4">
                     <ul className="flex flex-col gap-2">
                       {exp.items.map((item, i) => (
-                        <li key={i} className={`${poppins.className} flex items-start gap-2.5 text-sm leading-relaxed ${textBody}`}>
+                        <li
+                          key={i}
+                          className={`${poppins.className} flex items-start gap-2.5 text-sm leading-relaxed ${textBody}`}
+                        >
                           <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" />
                           {item}
                         </li>
@@ -514,7 +751,12 @@ export default function Home() {
                   </div>
                   <div className="px-5 md:px-6 pb-5 flex flex-wrap gap-2">
                     {exp.techlang.map((item, i) => (
-                      <span key={i} className={`${poppins.className} px-3 py-1 text-xs font-medium rounded-full border border-emerald-200 text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition-colors duration-150`}>{item}</span>
+                      <span
+                        key={i}
+                        className={`${poppins.className} px-3 py-1 text-xs font-medium rounded-full border border-emerald-200 text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition-colors duration-150`}
+                      >
+                        {item}
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -524,25 +766,51 @@ export default function Home() {
         </div>
 
         {/* ─── FOOTER ────────────────────────────────────────────── */}
-        <div id="footer" className="portfolio-container select-none relative overflow-hidden">
+        <div
+          id="footer"
+          className="portfolio-container select-none relative overflow-hidden"
+        >
           <div className="w-full h-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent" />
           <footer className="w-full pt-16 pb-8 px-4 md:px-10 lg:px-20">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 mb-12">
                 <div className="text-center md:text-left max-w-sm">
-                  <div className={`${poppins.className} font-bold text-2xl tracking-tight mb-3`}>
-                    <span className="text-emerald-500">J</span><span className={textHead}>L</span>
+                  <div
+                    className={`${poppins.className} font-bold text-2xl tracking-tight mb-3`}
+                  >
+                    <span className="text-emerald-500">J</span>
+                    <span className={textHead}>L</span>
                   </div>
-                  <h2 className={`${poppins.className} text-xl font-semibold mb-2 ${textHead}`}>Joedel Lagong</h2>
-                  <p className={`${poppins.className} text-sm leading-relaxed ${textSub}`}>
-                    Full-Stack Developer building modern web and mobile applications. Open for freelance work, collaborations, and full-time opportunities.
+                  <h2
+                    className={`${poppins.className} text-xl font-semibold mb-2 ${textHead}`}
+                  >
+                    Joedel Lagong
+                  </h2>
+                  <p
+                    className={`${poppins.className} text-sm leading-relaxed ${textSub}`}
+                  >
+                    Full-Stack Developer building modern web and mobile
+                    applications. Open for freelance work, collaborations, and
+                    full-time opportunities.
                   </p>
                 </div>
                 <div className="flex flex-col items-center md:items-end gap-4">
-                  <p className={`${poppins.className} text-sm font-medium ${textSub}`}>Let's build something together</p>
-                  <a href="mailto:joedelsalaslagong@gmail.com"
-                    className={`${poppins.className} inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold shadow-md shadow-emerald-200/40 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5`}>
-                    <Image src="/EmailRounded.png" alt="email" width={18} height={18} className="brightness-0 invert" />
+                  <p
+                    className={`${poppins.className} text-sm font-medium ${textSub}`}
+                  >
+                    Let's build something together
+                  </p>
+                  <a
+                    href="mailto:joedelsalaslagong@gmail.com"
+                    className={`${poppins.className} inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold shadow-md shadow-emerald-200/40 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5`}
+                  >
+                    <Image
+                      src="/EmailRounded.png"
+                      alt="email"
+                      width={18}
+                      height={18}
+                      className="brightness-0 invert"
+                    />
                     Say Hello
                   </a>
                 </div>
@@ -551,33 +819,67 @@ export default function Home() {
               <div className={`h-px mb-8 ${divider}`} />
 
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className={`flex items-center gap-2 rounded-2xl px-4 py-2 backdrop-blur-sm shadow-sm border
-                  ${dark ? "bg-gray-800/80 border-gray-700" : "bg-white/80 border-gray-200"}`}>
+                <div
+                  className={`flex items-center gap-2 rounded-2xl px-4 py-2 backdrop-blur-sm shadow-sm border
+                  ${dark ? "bg-gray-800/80 border-gray-700" : "bg-white/80 border-gray-200"}`}
+                >
                   {[
-                    { src: "/facebook.png", alt: "facebook", href: "https://www.facebook.com/joedelagong/" },
-                    { src: "/github.png", alt: "github", href: "https://github.com/joedellagongg" },
-                    { src: "/linkedin.png", alt: "linkedin", href: "https://www.linkedin.com/in/joedellagong/" },
-                    { src: "/EmailRounded.png", alt: "email", href: "mailto:joedelsalaslagong@gmail.com" },
-                    { src: "/CarbonDocumentPdf.png", alt: "resume", href: "/JoedelLagong-Resume.pdf", download: true },
+                    {
+                      src: "/facebook.png",
+                      alt: "facebook",
+                      href: "https://www.facebook.com/joedelagong/",
+                    },
+                    {
+                      src: "/github.png",
+                      alt: "github",
+                      href: "https://github.com/joedellagongg",
+                    },
+                    {
+                      src: "/linkedin.png",
+                      alt: "linkedin",
+                      href: "https://www.linkedin.com/in/joedellagong/",
+                    },
+                    {
+                      src: "/EmailRounded.png",
+                      alt: "email",
+                      href: "mailto:joedelsalaslagong@gmail.com",
+                    },
+                    {
+                      src: "/CarbonDocumentPdf.png",
+                      alt: "resume",
+                      href: "/JoedelLagong-Resume.pdf",
+                      download: true,
+                    },
                   ].map(({ src, alt, href, download }) => (
-                    <a key={alt} href={href} download={download || undefined}
+                    <a
+                      key={alt}
+                      href={href}
+                      download={download || undefined}
                       target={href.startsWith("http") ? "_blank" : undefined}
                       rel="noopener noreferrer"
                       className={`w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-150 group
-                        ${dark ? "hover:bg-gray-700" : "hover:bg-emerald-50"}`}>
-                      <Image src={src} alt={alt} width={22} height={22}
-                        className={`group-hover:scale-110 transition-transform duration-150 ${dark ? "brightness-75 hover:brightness-100" : ""}`} />
+                        ${dark ? "hover:bg-gray-700" : "hover:bg-emerald-50"}`}
+                    >
+                      <Image
+                        src={src}
+                        alt={alt}
+                        width={22}
+                        height={22}
+                        className={`group-hover:scale-110 transition-transform duration-150 ${dark ? "brightness-75 hover:brightness-100" : ""}`}
+                      />
                     </a>
                   ))}
                 </div>
-                <p className={`${poppins.className} text-xs text-center ${textSub}`}>
-                  © {new Date().getFullYear()} Joedel Lagong. All rights reserved.
+                <p
+                  className={`${poppins.className} text-xs text-center ${textSub}`}
+                >
+                  © {new Date().getFullYear()} Joedel Lagong. All rights
+                  reserved.
                 </p>
               </div>
             </div>
           </footer>
         </div>
-
       </div>
     </div>
   );
